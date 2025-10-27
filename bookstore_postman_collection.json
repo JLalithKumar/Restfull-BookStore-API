@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "Bookstore API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "RESTful Bookstore API: Books and Authors"
+  },
+  "item": [
+    {
+      "name": "Books",
+      "item": [
+        {"name": "Get All Books","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/books","protocol":"http","host":["localhost"],"port":"8080","path":["api","books"]}}},
+        {"name": "Get Book By ID","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/books/id/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","id","1"]}}},
+        {"name": "Create Book","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"title\":\"Harry Potter and the Philosopher's Stone\",\"price\":399.0,\"author\":{\"id\":1}}"},"url":{"raw":"http://localhost:8080/api/books","protocol":"http","host":["localhost"],"port":"8080","path":["api","books"]}}},
+        {"name": "Update Book","request":{"method":"PUT","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"title\":\"Harry Potter and the Chamber of Secrets\",\"price\":450.0,\"author\":{\"id\":1}}"},"url":{"raw":"http://localhost:8080/api/books/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","1"]}}},
+        {"name": "Delete Book","request":{"method":"DELETE","url":{"raw":"http://localhost:8080/api/books/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","1"]}}},
+        {"name": "Get Paginated & Sorted Books","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/books/paginated?page=0&size=5&sortBy=id","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","paginated"],"query":[{"key":"page","value":"0"},{"key":"size","value":"5"},{"key":"sortBy","value":"id"}]}}},
+        {"name": "Filter Books by Author","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/books/search?author=J.K.%20Rowling","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","search"],"query":[{"key":"author","value":"J.K. Rowling"}]}}},
+        {"name": "Filter Books by Price Range","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/books/search?minPrice=100&maxPrice=500","protocol":"http","host":["localhost"],"port":"8080","path":["api","books","search"],"query":[{"key":"minPrice","value":"100"},{"key":"maxPrice","value":"500"}]}}}
+      ]
+    },
+    {
+      "name": "Authors",
+      "item": [
+        {"name": "Get All Authors","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/authors","protocol":"http","host":["localhost"],"port":"8080","path":["api","authors"]}}},
+        {"name": "Get Author By ID","request":{"method":"GET","url":{"raw":"http://localhost:8080/api/authors/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","authors","1"]}}},
+        {"name": "Create Author","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"name\":\"J.K. Rowling\",\"nationality\":\"British\"}"},"url":{"raw":"http://localhost:8080/api/authors","protocol":"http","host":["localhost"],"port":"8080","path":["api","authors"]}}},
+        {"name": "Update Author","request":{"method":"PUT","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"name\":\"J.K. Rowling\",\"nationality\":\"British\"}"},"url":{"raw":"http://localhost:8080/api/authors/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","authors","1"]}}},
+        {"name": "Delete Author","request":{"method":"DELETE","url":{"raw":"http://localhost:8080/api/authors/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","authors","1"]}}}
+      ]
+    }
+  ]
+}
