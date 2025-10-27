@@ -1,5 +1,4 @@
 # 📚 RESTful Bookstore API
-_A Project by Java Elevate Labs_
 
 ## 🧠 Overview
 The **RESTful Bookstore API** is a simple backend application built using **Spring Boot** that manages **Books** and **Authors**.  
